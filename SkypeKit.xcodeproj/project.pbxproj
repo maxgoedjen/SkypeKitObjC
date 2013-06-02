@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		507F9C73175B3BF700DABA1A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507F9C6D175B38C300DABA1A /* Security.framework */; };
+		507F9C74175B3BFE00DABA1A /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 507F9C69175B384200DABA1A /* STPrivilegedTask.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		65005D6013C9FC3300293F84 /* SKContactSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 65005D5E13C9FC3300293F84 /* SKContactSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65005D6513C9FC4600293F84 /* ContactSearchBinding.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 65005D6313C9FC4600293F84 /* ContactSearchBinding.hpp */; };
 		65005D6613C9FC4600293F84 /* ContactSearchBinding.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65005D6413C9FC4600293F84 /* ContactSearchBinding.mm */; };
@@ -88,6 +90,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		507F9C68175B384200DABA1A /* STPrivilegedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STPrivilegedTask.h; path = SkypeKitRuntimeLauncher/STPrivilegedTask.h; sourceTree = SOURCE_ROOT; };
+		507F9C69175B384200DABA1A /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STPrivilegedTask.m; path = SkypeKitRuntimeLauncher/STPrivilegedTask.m; sourceTree = SOURCE_ROOT; };
+		507F9C6D175B38C300DABA1A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		65005D5E13C9FC3300293F84 /* SKContactSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKContactSearch.h; sourceTree = "<group>"; };
 		65005D6313C9FC4600293F84 /* ContactSearchBinding.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ContactSearchBinding.hpp; sourceTree = "<group>"; };
 		65005D6413C9FC4600293F84 /* ContactSearchBinding.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ContactSearchBinding.mm; sourceTree = "<group>"; };
@@ -153,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				507F9C73175B3BF700DABA1A /* Security.framework in Frameworks */,
 				65878865162E08500055D4CA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				65878867162E08500055D4CA /* main.m */,
+				507F9C68175B384200DABA1A /* STPrivilegedTask.h */,
+				507F9C69175B384200DABA1A /* STPrivilegedTask.m */,
 			);
 			path = SkypeKitRuntimeLauncher;
 			sourceTree = "<group>";
@@ -246,6 +254,7 @@
 		659E87AF13AE9C2F0045F193 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				507F9C6D175B38C300DABA1A /* Security.framework */,
 				65456A7113B6614800DF7222 /* AppKit.framework */,
 				659E87C213AE9C4C0045F193 /* Foundation.framework */,
 				659E87B213AE9C2F0045F193 /* Other Frameworks */,
@@ -441,6 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				507F9C74175B3BFE00DABA1A /* STPrivilegedTask.m in Sources */,
 				65878868162E08500055D4CA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,7 +590,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "SkypeKit/SkypeKit-Info.plist";
-				INSTALL_PATH = "@loader_path/../Resources";
+				INSTALL_PATH = "@resource_path/../Resources";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -599,7 +609,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "SkypeKit/SkypeKit-Info.plist";
-				INSTALL_PATH = "@loader_path/../Resources";
+				INSTALL_PATH = "@resource_path/../Resources";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
